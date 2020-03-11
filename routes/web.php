@@ -20,4 +20,13 @@ Route::post('/admin/logout', 'Admin\AdminLoginController@logout')->name('admin.l
 
 Route::group(['middleware'=>'auth:admin','prefix'=>'admin','namespace'=>'Admin'],function(){
     Route::get('/dashboard', 'AdminDashboardController@index')->name('admin.dashboard');
+    Route::get('/branch', 'AdminDashboardController@showAdminBranch')->name('admin.add_branch');
+    
+    /***
+     * Branch Controller From Admin
+     */
+    Route::get('/list/branch/','BranchController@ajaxGetBranchList')->name('admin.ajax.branch_list');
+    Route::get('/add/branch/','BranchController@addBranchForm')->name('admin.add_branch');
 });
+
+

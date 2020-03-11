@@ -10,4 +10,8 @@ class AdminDashboardController extends Controller
     public function index(){
         return view('admin.dashboard');
     }
+
+    public function showAdminBranch(){
+        return view('admin.branch');
+    }
 }
