@@ -16,6 +16,9 @@
     <link href="{{asset('fooover/css/animate.css')}}" rel="stylesheet">
     <link href="{{asset('fooover/css/style.css')}}" rel="stylesheet">
 
+    <link href="{{asset('fooover/css/plugins/dataTables/datatables.min.css')}}" rel="stylesheet">
+    <link href="{{asset('fooover/css/plugins/dataTables/responsive.bootstrap4.min.css')}}" rel="stylesheet">
+
 </head>
 <body>
     <div id="wrapper">

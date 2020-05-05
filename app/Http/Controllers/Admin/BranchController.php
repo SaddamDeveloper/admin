@@ -14,4 +14,5 @@ class BranchController extends Controller
     public function addBranchForm(){
         return view('admin.add_branch_form');
     }
+
 }

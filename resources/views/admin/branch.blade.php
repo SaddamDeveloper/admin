@@ -1,7 +1,7 @@
 @extends('admin.template.admin_master')
 @section('content')
 <div class="wrapper wrapper-content">
-    <a href="{{route('admin.add_branch')}}" class="btn btn-primary m-t">{{__('Add Branch')}}</a>
+    <a href="{{route('admin.add_branch_form')}}" class="btn btn-primary m-t">{{__('Add Branch')}}</a>
     <div class="table-responsive">
         <table id="branch-list" class="table table-striped table-bordered table-hover dataTables-example" class="display" style="width:100%">
             <thead>

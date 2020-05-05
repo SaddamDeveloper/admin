@@ -27,14 +27,14 @@
                 <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Branches</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse">
                     <li><a href="{{route('admin.add_branch')}}">Branch List</a></li>
-                    <li><a href="graph_morris.html">Add Branch</a></li>
+                    <li><a href="{{route('admin.add_branch_form')}}">Add Branch</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Restaurants</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse">
-                    <li><a href="graph_flot.html">Restaurant List</a></li>
-                    <li><a href="graph_morris.html">Add Restaurant</a></li>
+                    <li><a href="{{route('admin.ajax.restaurant_list')}}">Restaurant List</a></li>
+                <li><a href="{{route('admin.add.add_restaurant_form')}}">Add Restaurant</a></li>
                 </ul>
             </li>
             <li>
@@ -44,7 +44,14 @@
                     <li><a href="graph_morris.html">Add Rider</a></li>
                 </ul>
             </li>
-
+            <li>
+                <a href="#"><i class="fa fa-gear"></i> <span class="nav-label">Configuration</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li><a href="{{route('admin.tax')}}">Add Tax</a></li>
+                    <li><a href="{{route('admin.state')}}">Add State</a></li>
+                    <li><a href="{{route('admin.city')}}">Add City</a></li>
+                </ul>
+            </li>
         </ul>
 
     </div>

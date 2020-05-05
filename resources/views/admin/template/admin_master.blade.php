@@ -1,3 +1,5 @@
 @include('admin.include.header')
+    @include('admin.include.message')
     @yield('content')
 @include('admin.include.footer')
+@yield('script')

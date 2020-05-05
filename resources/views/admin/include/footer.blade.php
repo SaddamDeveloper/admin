@@ -48,5 +48,10 @@
 
     <!-- Sparkline demo data  -->
     <script src="{{asset('fooover/js/demo/sparkline-demo.js')}}"></script>
+
+    <script src="{{asset('fooover/js/plugins/dataTables/datatables.min.js')}}"></script>
+    <script src="{{asset('fooover/js/plugins/dataTables/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('fooover/js/plugins/dataTables/dataTables.responsive.min.js')}}"></script>
+    <script src="{{asset('fooover/js/plugins/dataTables/responsive.bootstrap4.min.js')}}"></script>
 </body>
 </html>
