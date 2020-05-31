@@ -28,6 +28,7 @@
                     </div>
                     <div class="ibox-content">
                         {{ Form::open(array('route' => 'admin.store.menu', 'method' => 'post')) }}
+                        <input type="hidden" name="restaurantId" value="{{$fetch_restaurant->id}}">
                         <div class="form-group  row {{ $errors->has('name') ? 'has-error' : 'has-success' }}">
                             <label class="col-sm-2 col-form-label">{{__('Menu Name*')}}</label>
                             <div class="col-sm-10">

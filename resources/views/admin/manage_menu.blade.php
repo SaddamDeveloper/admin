@@ -30,7 +30,7 @@
                     </div>
                     <div class="ibox-content">
                         <input type="hidden" name="restaurantId" value="{{$fetch_restaurant->id}}">
-                        <a href="{{route('admin.add.menu')}}" class="btn btn-success pull-right">Add Menu</a>
+                        <a href="{{route('admin.add.menu', ['restaurantId' => encrypt($fetch_restaurant->id)])}}" class="btn btn-success pull-right">Add Menu</a>
                         <table class="table table-striped dt-responsive nowrap" style="width:100%" id="menu_list">
                             <thead>
                             <tr>

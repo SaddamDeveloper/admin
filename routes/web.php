@@ -1,16 +1,8 @@
 <?php
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
+/**
+ * Frontentd
+ */
+require __DIR__.'/frontend.php';
 /***
  * Admin Control
  */
@@ -46,7 +38,7 @@ Route::group(['middleware'=>'auth:admin','prefix'=>'admin','namespace'=>'Admin']
      * Restaurant Menu
      */
     Route::get('/status/restaurant/{id}', 'RestaurantController@manageMenu')->name('admin.restaurant_menu');
-    Route::get('add/restaurant/menu', 'RestaurantController@addMenu')->name('admin.add.menu');
+    Route::get('add/restaurant/menu/{restaurantId}', 'RestaurantController@addMenu')->name('admin.add.menu');
     Route::post('store/restaurant/menu', 'RestaurantController@storeMenu')->name('admin.store.menu');
     Route::post('update/restaurant/menu', 'RestaurantController@updateMenu')->name('admin.update.menu');
     Route::get('/all/menu/list/', 'RestaurantController@ajaxGetMenuList')->name('admin.ajax.menu_list');

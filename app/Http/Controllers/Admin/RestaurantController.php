@@ -283,8 +283,14 @@ class RestaurantController extends Controller
         return view('admin.manage_menu', compact('fetch_restaurant'));
     }
 
-    public function addMenu(){
-        return view('admin.add_menu');
+    public function addMenu($restaurantId){
+        try {
+            $id = decrypt($restaurantId);
+        }catch(DecryptException $e) {
+            return redirect()->back();
+        }
+        $fetch_restaurant = DB::table('restaurant')->where('id', $id)->first();
+        return view('admin.add_menu', compact('fetch_restaurant'));
     }
     public function storeMenu(Request $request){
         $this->validate($request, [
@@ -294,6 +300,7 @@ class RestaurantController extends Controller
     
         $add = DB::table('restaurant_menu')
         ->insertGetId([
+            'restaurant_id' => $request->input('restaurantId'),
             'name' => $request->input('name'),
             'description' => $request->input('description'),
             'status' => 1,
